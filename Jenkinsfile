@@ -1,4 +1,10 @@
 pipeline {
+    agent { 
+        node {
+            label 'shared' 
+        }
+    }
+
     stages {
         stage('Build') { 
             steps {
