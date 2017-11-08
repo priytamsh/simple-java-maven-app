@@ -34,7 +34,7 @@ post {
         }
         success {
             echo 'This will run only if successful'
-            slackSend channel: '#priytam',
+            slackSend channel: '@priytam',
                   color: 'good',
                   message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
 
