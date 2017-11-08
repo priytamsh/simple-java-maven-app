@@ -34,6 +34,9 @@ post {
         }
         success {
             echo 'This will run only if successful'
+            archive 'build/libs/**/*.jar'
+            junit 'build/reports/**/*.xml'
+
         }
         failure {
             echo 'This will run only if failed'
