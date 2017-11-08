@@ -34,8 +34,10 @@ post {
         }
         success {
             echo 'This will run only if successful'
-            archive 'build/libs/**/*.jar'
-            junit 'build/reports/**/*.xml'
+            slackSend channel: '#priytam',
+                  color: 'good',
+                  message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
+
 
         }
         failure {
