@@ -1,15 +1,15 @@
 pipeline {
-    agent { 
-        node {
-            label 'docker' 
-        }
+    agent none
+        
     }
 
     stages {
         stage('Back-end') {
-            
+		agent {
+			 docker { image 'maven:3-alpine' }
+			}
 			steps {
-			  sh 'whoami'
+			  sh 'mvn --version'
 			}
 			      
         }
