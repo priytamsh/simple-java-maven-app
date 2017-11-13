@@ -11,11 +11,7 @@ pipeline {
 			steps {
 			  sh 'whoami'
 			}
-			            
-         
-			steps {
-			  sh 'mvn --version'
-			}
+			      
         }
         stage('Front-end') {
 		     
