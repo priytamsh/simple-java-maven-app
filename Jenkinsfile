@@ -3,8 +3,7 @@ pipeline {
                  node {
                           label 'docker' 
                       }
-        }
-  stages {
+        } stages {
   stage('Back-end') {
   agent {
   docker { image 'maven:3-alpine' }
