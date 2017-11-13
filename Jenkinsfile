@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Back-end') {
             
-			
+			steps {
+			  sh 'whoami'
+			}
 			agent {
 			 docker { image 'maven:3-alpine' }
 			}
